@@ -3,49 +3,7 @@ import { motion } from 'framer-motion';
 
 export default function Certificates({ isFullPage = false }: { isFullPage?: boolean }) {
   const certificates = [
-    {
-      id: 1,
-      title: 'Sertifikat Kompetensi Keahlian RPL',
-      issuer: 'BNSP / SMKN 1 Subang',
-      date: '2021',
-      image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=800'
-    },
-    {
-      id: 2,
-      title: 'Dicoding: Belajar Dasar Pemrograman Web',
-      issuer: 'Dicoding Indonesia',
-      date: '2023',
-      image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800'
-    },
-    {
-      id: 3,
-      title: 'Sertifikat Magang IT Support',
-      issuer: 'Politeknik Pos Indonesia',
-      date: '2020',
-      image: 'https://images.unsplash.com/photo-1568227451052-167bb309e34d?auto=format&fit=crop&q=80&w=800'
-    },
-    {
-      id: 4,
-      title: 'Cisco Certified Network Associate (CCNA) Course',
-      issuer: 'Cisco Networking Academy',
-      date: '2023',
-      image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800'
-    },
-    {
-      id: 5,
-      title: 'Belajar Jaringan Komputer untuk Pemula',
-      issuer: 'Dicoding Indonesia',
-      date: '2024',
-      image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=800'
-    },
-    {
-      id: 6,
-      title: 'Cloud Infrastructure Foundations',
-      issuer: 'Google Cloud Training',
-      date: '2025',
-      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800'
-    }
-  ];
+];
 
   const displayedCertificates = isFullPage ? certificates : certificates.slice(0, 3);
 

@@ -17,73 +17,7 @@ type Project = {
 export default function ProjectsPreview({ isFullPage = false }: { isFullPage?: boolean }) {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const projects: Project[] = [
-    {
-      id: 1,
-      title: 'Sistem Manajemen Inventaris Lab',
-      description: 'Aplikasi berbasis web untuk melacak dan mengelola perangkat keras laboratorium, mempermudah administrasi dan pemeliharaan.',
-      longDescription: 'Sistem Manajemen Inventaris dikembangkan untuk memfasilitasi asisten lab dalam mengelola perangkat keras komputer, mencatat peminjaman, dan melacak kondisi perangkat. Sistem ini memastikan tidak ada aset yang hilang atau rusak tanpa pengawasan.',
-      features: ['Pencatatan aset secara realtime', 'Sistem peminjaman dan pengembalian', 'Laporan kondisi perangkat keras', 'Role-based access control (Admin & Asisten)'],
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800',
-      stack: ['PHP', 'Laravel', 'MySQL'],
-      status: 'Shipped',
-      year: '2024'
-    },
-    {
-      id: 2,
-      title: 'RESTful API E-Commerce',
-      description: 'Pengembangan backend API yang handal menggunakan Laravel Sanctum untuk autentikasi yang aman dan efisien.',
-      longDescription: 'Proyek ini merupakan backend dari aplikasi e-commerce berskala menengah. Difokuskan pada optimasi query database untuk pencarian produk, integrasi payment gateway, serta keamanan endpoint API menggunakan JWT/Sanctum.',
-      features: ['Autentikasi & Autorisasi (Laravel Sanctum)', 'Manajemen Produk & Kategori', 'Checkout & Integrasi Payment', 'Dokumentasi API terstruktur'],
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
-      stack: ['Laravel', 'REST API', 'JWT', 'MySQL'],
-      status: 'Shipped',
-      year: '2024'
-    },
-    {
-      id: 3,
-      title: 'Portal Monitoring Jaringan',
-      description: 'Dashboard interaktif untuk memonitor lalu lintas jaringan dan memberikan notifikasi ancaman keamanan.',
-      longDescription: 'Sebuah dashboard monitoring untuk tim IT Support. Aplikasi ini membaca log dari router dan server, memvisualisasikan data lalu lintas jaringan secara real-time, dan memberikan alert jika terdeteksi anomali atau serangan cyber.',
-      features: ['Visualisasi grafik lalu lintas data', 'Sistem notifikasi/alerting keamanan', 'Log tracing & reporting', 'Integrasi dengan SNMP'],
-      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800',
-      stack: ['React', 'Node.js', 'Tailwind', 'Socket.io'],
-      status: 'In Progress',
-      year: '2025'
-    },
-    {
-      id: 4,
-      title: 'Aplikasi HRIS Enterprise',
-      description: 'Sistem Informasi Sumber Daya Manusia (HRIS) untuk memanajemen data karyawan, absensi, dan penggajian.',
-      longDescription: 'Aplikasi berskala enterprise ini dibangun untuk mengelola data ratusan karyawan. Memiliki kapabilitas perhitungan gaji otomatis berdasarkan kehadiran dan terintegrasi dengan mesin absensi sidik jari biometrik.',
-      features: ['Manajemen data pegawai', 'Integrasi mesin absensi biometrik', 'Perhitungan payroll otomatis', 'Sistem pengajuan cuti berjenjang'],
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800',
-      stack: ['React', 'TypeScript', 'Node.js', 'PostgreSQL'],
-      status: 'Shipped',
-      year: '2023'
-    },
-    {
-      id: 5,
-      title: 'Automated Server Backup Tool',
-      description: 'Script utilitas backend untuk mengotomatisasi pencadangan database dan file krusial ke penyimpanan cloud.',
-      longDescription: 'Alat berbasis command-line yang digunakan oleh tim IT infrastructure untuk memastikan keamanan data. Script ini menjadwalkan backup berkala, mengenkripsi arsip, dan mengunggahnya secara otomatis ke bucket Amazon S3.',
-      features: ['Penjadwalan otomatis via Cron', 'Enkripsi arsip AES-256', 'Upload ke AWS S3', 'Notifikasi status via Email/Telegram'],
-      image: 'https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&q=80&w=800',
-      stack: ['Python', 'Bash', 'AWS S3', 'Linux'],
-      status: 'Shipped',
-      year: '2024'
-    },
-    {
-      id: 6,
-      title: 'IoT Server Room Monitor',
-      description: 'Sistem pendeteksi suhu dan kelembapan ruang server berbasis Internet of Things untuk mencegah overheating.',
-      longDescription: 'Sistem hardware dan web server untuk mendeteksi suhu ruang server 24/7. Sensor mengirim data setiap menit ke server, dan jika suhu melebihi batas wajar, sistem akan memicu alarm dan notifikasi ke teknisi.',
-      features: ['Pembacaan sensor DHT22 real-time', 'Dashboard web untuk tracking suhu', 'Trigger notifikasi darurat', 'Penyimpanan log history data'],
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800',
-      stack: ['C++', 'Arduino', 'React', 'Firebase'],
-      status: 'In Progress',
-      year: '2025'
-    }
+  const projects: Project[] = [  
   ];
 
   const displayedProjects = isFullPage ? projects : projects.slice(0, 3);
